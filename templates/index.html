@@ -1,87 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Chandas Identifier</title>
-<link rel="stylesheet" href="/static/style.css">
+  <meta charset="utf-8">
+  <title>Chandas Identifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-  <h1>Chandas Identifier (Rule Engine Demo)</h1>
-  
-  <textarea id="shloka" placeholder="Paste shloka here..." rows="4"></textarea>
-  <button onclick="identifyShloka()">Identify Chandas</button>
+  <div class="wrap">
+    <header>
+      <h1>Chandas Identifier</h1>
+      <p class="subtitle">Detects Laghu/Guru patterns and matches classic meters (Gayatri, Anushtubh, Trishtubh, etc.).</p>
+    </header>
 
-  <div id="result">
-    <h2>Result</h2>
-    <div id="resultBody">No result yet.</div>
+    <section>
+      <form method="post" class="panel">
+        <label for="shloka">Paste a shloka (Devanagari or IAST). Use danda "।" or line breaks if available.</label>
+        <textarea id="shloka" name="shloka" rows="6" placeholder="{{ sample }}">{{ request.form.get('shloka', '') or sample }}</textarea>
+
+        <div class="row">
+          <label for="script">Script</label>
+          <select id="script" name="script">
+            <option value="auto" {% if request.form.get('script')=='auto' or not request.form.get('script') %}selected{% endif %}>Auto</option>
+            <option value="devanagari" {% if request.form.get('script')=='devanagari' %}selected{% endif %}>Devanagari</option>
+            <option value="latin" {% if request.form.get('script')=='latin' %}selected{% endif %}>Latin (IAST)</option>
+          </select>
+        </div>
+
+        <button type="submit">Identify Chandas</button>
+      </form>
+    </section>
+
+    {% if result %}
+    <section class="panel result">
+      <h2>Result</h2>
+      <div class="grid">
+        <div>
+          <p><strong>Detected script:</strong> {{ result.script }}</p>
+          <p><strong>Guessed meter:</strong> {{ result.guess.name }}</p>
+          <p><strong>Target:</strong> {{ result.guess.target_padas }} padas × {{ result.guess.target_len }} syllables</p>
+          <p><strong>Confidence:</strong> {{ result.guess.confidence }}</p>
+        </div>
+        <div>
+          <p><strong>Parsed padas:</strong> {{ result.pada_counts|length }}</p>
+          <p><strong>Pada counts:</strong> {{ result.pada_counts|join(", ") }}</p>
+          <p class="note">{{ result.note }}</p>
+        </div>
+      </div>
+
+      <h3>Pada patterns (G = Guru, L = Laghu)</h3>
+      <table>
+        <thead><tr><th>#</th><th>Syllables</th><th>Pattern</th></tr></thead>
+        <tbody>
+          {% for p in result.padas %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ p.count }}</td>
+            <td class="mono">{{ p.pattern }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    {% endif %}
+
+    <footer>
+      <p>Tip: If your shloka has only two lines, the app will try a 2→4 pada split automatically.</p>
+    </footer>
   </div>
-
-  <hr>
-
-  <h2>Add New Rule</h2>
-  <input type="text" id="newPattern" placeholder="Pattern (e.g., 11010101)">
-  <input type="text" id="newName" placeholder="Chandas Name (e.g., Trishtubh)">
-  <button onclick="addRule()">Add Rule</button>
-  <div id="ruleMessage"></div>
-
-  <h3>Existing Rules:</h3>
-  <ul id="rulesList">
-    {% for r in rules %}
-      <li>{{ r.pattern }} : {{ r.name }}</li>
-    {% endfor %}
-  </ul>
-
-</div>
-
-<script>
-async function identifyShloka(){
-    const shloka = document.getElementById("shloka").value.trim();
-    if(!shloka){ alert("Paste a shloka"); return; }
-
-    const res = await fetch("/identify", {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify({shloka})
-    });
-    const data = await res.json();
-    const container = document.getElementById("resultBody");
-
-    if(data.error){
-        container.innerText = data.error;
-        return;
-    }
-
-    let html = `<p><strong>Shloka:</strong> ${data.shloka}</p>`;
-    html += `<p><strong>Syllables:</strong> ${data.syllables.join(", ")}</p>`;
-    html += `<p><strong>Pattern:</strong> ${data.pattern}</p>`;
-    html += `<p><strong>Matched Chandas:</strong> ${data.chandas || "Not found in rules"}</p>`;
-    container.innerHTML = html;
-}
-
-async function addRule(){
-    const pattern = document.getElementById("newPattern").value.trim();
-    const name = document.getElementById("newName").value.trim();
-    if(!pattern || !name){ alert("Enter both pattern and name"); return; }
-
-    const res = await fetch("/addrule", {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify({pattern, name})
-    });
-    const data = await res.json();
-    const msg = document.getElementById("ruleMessage");
-    if(data.error){
-        msg.innerText = data.error;
-    } else {
-        msg.innerText = data.message;
-        // Add to existing rules list
-        const ul = document.getElementById("rulesList");
-        const li = document.createElement("li");
-        li.innerText = `${pattern} : ${name}`;
-        ul.appendChild(li);
-    }
-}
-</script>
 </body>
 </html>
