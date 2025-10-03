@@ -1,5 +1,16 @@
 [
-    { "pattern": "1010", "name": "Anushtubh" },
-    { "pattern": "11010101", "name": "Trishtubh" },
-    { "pattern": "1010110", "name": "Jagati" }
+  { "pattern": "10101010", "name": "Anushtubh" },
+  { "pattern": "10110101010", "name": "Trishtubh" },
+  { "pattern": "101101101010", "name": "Jagati" },
+  { "pattern": "10110110110110", "name": "Brihati" },
+  { "pattern": "1011010101", "name": "Pankti" },
+  { "pattern": "101101101", "name": "Shakvari" },
+  { "pattern": "1011011011011010", "name": "Atijagati" },
+  { "pattern": "01010110", "name": "Gayatri" },
+  { "pattern": "10110110101", "name": "Upajati" },
+  { "pattern": "11011011011011011", "name": "Mandakranta" },
+  { "pattern": "10101101010110", "name": "Vasantatilaka" },
+  { "pattern": "1011011011011011011", "name": "Shardulavikridita" },
+  { "pattern": "101101101101101101101", "name": "Sragdhara" },
+  { "pattern": "111000111000", "name": "Matrasamaka" }
 ]
