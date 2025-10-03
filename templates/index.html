@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chandas Identifier</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Chandas Identifier (Rule Engine Demo)</h1>
+  
+  <textarea id="shloka" placeholder="Paste shloka here..." rows="4"></textarea>
+  <button onclick="identifyShloka()">Identify Chandas</button>
+
+  <div id="result">
+    <h2>Result</h2>
+    <div id="resultBody">No result yet.</div>
+  </div>
+
+  <hr>
+
+  <h2>Add New Rule</h2>
+  <input type="text" id="newPattern" placeholder="Pattern (e.g., 11010101)">
+  <input type="text" id="newName" placeholder="Chandas Name (e.g., Trishtubh)">
+  <button onclick="addRule()">Add Rule</button>
+  <div id="ruleMessage"></div>
+
+  <h3>Existing Rules:</h3>
+  <ul id="rulesList">
+    {% for r in rules %}
+      <li>{{ r.pattern }} : {{ r.name }}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+
+<script>
+async function identifyShloka(){
+    const shloka = document.getElementById("shloka").value.trim();
+    if(!shloka){ alert("Paste a shloka"); return; }
+
+    const res = await fetch("/identify", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({shloka})
+    });
+    const data = await res.json();
+    const container = document.getElementById("resultBody");
+
+    if(data.error){
+        container.innerText = data.error;
+        return;
+    }
+
+    let html = `<p><strong>Shloka:</strong> ${data.shloka}</p>`;
+    html += `<p><strong>Syllables:</strong> ${data.syllables.join(", ")}</p>`;
+    html += `<p><strong>Pattern:</strong> ${data.pattern}</p>`;
+    html += `<p><strong>Matched Chandas:</strong> ${data.chandas || "Not found in rules"}</p>`;
+    container.innerHTML = html;
+}
+
+async function addRule(){
+    const pattern = document.getElementById("newPattern").value.trim();
+    const name = document.getElementById("newName").value.trim();
+    if(!pattern || !name){ alert("Enter both pattern and name"); return; }
+
+    const res = await fetch("/addrule", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({pattern, name})
+    });
+    const data = await res.json();
+    const msg = document.getElementById("ruleMessage");
+    if(data.error){
+        msg.innerText = data.error;
+    } else {
+        msg.innerText = data.message;
+        // Add to existing rules list
+        const ul = document.getElementById("rulesList");
+        const li = document.createElement("li");
+        li.innerText = `${pattern} : ${name}`;
+        ul.appendChild(li);
+    }
+}
+</script>
+</body>
+</html>
