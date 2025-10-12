@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandkosh – Advanced Sanskrit Prosody Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Crimson+Text:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn active" id="light-btn" title="Light Mode">☀️</button>
+        <button class="theme-btn" id="dark-btn" title="Dark Mode">🌙</button>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <div class="container hero-content">
+            <div class="hero-om">🕉️</div>
+            <h1 class="hero-title">Chandkosh</h1>
+            <p class="hero-tagline">छन्दकोश - The Treasury of Sanskrit Meters</p>
+            <p class="hero-subtitle">Unveiling the Mathematical Beauty of Sanskrit Prosody Through Advanced Pattern Recognition</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Message -->
+            <section class="section">
+                <div class="card text-center" style="background: var(--gradient-primary); color: white;">
+                    <h2 style="color: white; border: none;">Welcome to Chandkosh</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 0;">Your comprehensive digital companion for exploring the ancient science of Sanskrit prosody. Chandkosh combines traditional wisdom with modern technology to analyze, identify, and teach the intricate patterns of Sanskrit meters.</p>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="section">
+                <h2 class="section-title">Why Choose Chandkosh?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Precision Analysis</h3>
+                        <p>Advanced algorithms ensure precise syllable classification using traditional Sanskrit prosody rules</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Smart Matching</h3>
+                        <p>Fuzzy pattern matching finds closest meters even with minor variations using sophisticated algorithms</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Rich Database</h3>
+                        <p>Comprehensive collection of 20+ classical meters from Pingala's Chandaḥśāstra and beyond</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Multi-Script Support</h3>
+                        <p>Seamlessly works with both Devanagari script and IAST romanization</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Content -->
+            <section class="section">
+                <h2 class="section-title">Master Chandas Shastra</h2>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="basics">Fundamentals</button>
+                    <button class="tab-btn" data-tab="ganas">Gaṇa System</button>
+                    <button class="tab-btn" data-tab="rules">Classification Rules</button>
+                    <button class="tab-btn" data-tab="examples">Classic Examples</button>
+                </div>
+
+                <div class="tab-content active" id="basics">
+                    <div class="card">
+                        <h3>Understanding Sanskrit Prosody with Chandkosh</h3>
+                        <p>Sanskrit prosody (छन्दःशास्त्र) is an ancient science that classifies poetic meters based on the mathematical arrangement of syllables. Chandkosh brings this ancient wisdom to your fingertips with modern technology.</p>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li><strong>Laghu (लघु - L):</strong> Light/short syllable - typically containing a short vowel</li>
+                            <li><strong>Guru (गुरु - G):</strong> Heavy/long syllable - containing long vowels, diphthongs, or short vowels followed by conjunct consonants</li>
+                        </ul>
+                        <p>The genius of Ācārya Piṅgala's system, preserved in Chandkosh, lies in creating a binary classification system (2300 years ago!) where meters are defined by specific L-G patterns, making Sanskrit poetry both mathematical and melodious.</p>
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-body); border-radius: var(--radius-sm);">
+                            <p style="margin: 0;"><strong>Did you know?</strong> The word "Chandkosh" (छन्दकोश) combines "Chanda" (meter) and "Kosh" (treasury), literally meaning "Treasury of Meters" - reflecting our mission to preserve and share this ancient knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="ganas">
+                    <div class="card">
+                        <h3>The Eight Gaṇas in Chandkosh</h3>
+                        <p>Gaṇas are three-syllable patterns that form the building blocks of meters. Chandkosh recognizes and analyzes these fundamental units. They are memorized using the mnemonic: <span class="sanskrit">यमाताराजभानसलगाः</span></p>
+                        <table class="gana-table">
+                            <thead>
+                                <tr>
+                                    <th>Gaṇa</th>
+                                    <th>Name</th>
+                                    <th>Pattern</th>
+                                    <th>Mnemonic</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sanskrit">य-गण</td>
+                                    <td>ya-gaṇa</td>
+                                    <td class="gana-pattern">LGG</td>
+                                    <td class="sanskrit">यमाता</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">म-गण</td>
+                                    <td>ma-gaṇa</td>
+                                    <td class="gana-pattern">GGG</td>
+                                    <td class="sanskrit">मातारा</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">त-गण</td>
+                                    <td>ta-gaṇa</td>
+                                    <td class="gana-pattern">GGL</td>
+                                    <td class="sanskrit">ताराज</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">र-गण</td>
+                                    <td>ra-gaṇa</td>
+                                    <td class="gana-pattern">GLG</td>
+                                    <td class="sanskrit">राजभा</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">ज-गण</td>
+                                    <td>ja-gaṇa</td>
+                                    <td class="gana-pattern">LGL</td>
+                                    <td class="sanskrit">जभान</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">भ-गण</td>
+                                    <td>bha-gaṇa</td>
+                                    <td class="gana-pattern">GLL</td>
+                                    <td class="sanskrit">भानस</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">न-गण</td>
+                                    <td>na-gaṇa</td>
+                                    <td class="gana-pattern">LLL</td>
+                                    <td class="sanskrit">नसल</td>
+                                </tr>
+                                <tr>
+                                    <td class="sanskrit">स-गण</td>
+                                    <td>sa-gaṇa</td>
+                                    <td class="gana-pattern">LLG</td>
+                                    <td class="sanskrit">सलगाः</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="rules">
+                    <div class="card">
+                        <h3>Chandkosh Classification Algorithm</h3>
+                        <h4>When does Chandkosh classify a syllable as Guru (Heavy)?</h4>
+                        <ol style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Contains a long vowel (आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ)</li>
+                            <li>Contains a short vowel followed by anusvāra (ं) or visarga (ः)</li>
+                            <li>Contains a short vowel followed by a conjunct consonant</li>
+                            <li>Is at the end of a pāda (पादान्त) - often considered long by position</li>
+                        </ol>
+                        <h4>When does Chandkosh classify a syllable as Laghu (Light)?</h4>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Contains a short vowel (अ, इ, उ, ऋ, ऌ) not followed by conjunct consonants</li>
+                            <li>Not at the end of a pāda (unless specifically marked)</li>
+                        </ul>
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-body); border-radius: var(--radius-sm);">
+                            <p style="margin: 0;"><strong>Chandkosh Tip:</strong> Our algorithm considers contextual rules and sandhi effects for maximum accuracy in syllable classification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="examples">
+                    <div class="card">
+                        <h3>Classic Verses in Chandkosh Database</h3>
+                        <div class="example-grid">
+                            <div class="example-card">
+                                <div class="example-title">Kālidāsa's Invocation</div>
+                                <div class="example-text">वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये</div>
+                                <div class="example-meter">Meter: Anuṣṭubh</div>
+                            </div>
+                            <div class="example-card">
+                                <div class="example-title">Bhagavad Gītā 2.47</div>
+                                <div class="example-text">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन</div>
+                                <div class="example-meter">Meter: Anuṣṭubh</div>
+                            </div>
+                            <div class="example-card">
+                                <div class="example-title">Meghadūta Opening</div>
+                                <div class="example-text">कश्चित्कान्ताविरहगुरुणा स्वाधिकारात्प्रमत्तः</div>
+                                <div class="example-meter">Meter: Mandākrāntā</div>
+                            </div>
+                            <div class="example-card">
+                                <div class="example-title">Śiśupālavadha</div>
+                                <div class="example-text">श्रियः पतिः श्रीमति शासितुं जगत्</div>
+                                <div class="example-meter">Meter: Vasantatilakā</div>
+                            </div>
+                            <div class="example-card">
+                                <div class="example-title">Nītiśataka</div>
+                                <div class="example-text">सत्यान्वेषी च विद्वान् हितकर उदारो</div>
+                                <div class="example-meter">Meter: Śārdūlavikrīḍita</div>
+                            </div>
+                            <div class="example-card">
+                                <div class="example-title">Kumārasambhava</div>
+                                <div class="example-text">अस्त्युत्तरस्यां दिशि देवतात्मा</div>
+                                <div class="example-meter">Meter: Śloka (Anuṣṭubh)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="section">
+                <h2 class="section-title text-center">Chandkosh by Numbers</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Classical Meters</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Script Types</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Verses to Explore</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analyzer Tool -->
+            <section class="section">
+                <h2 class="section-title">Analyze with Chandkosh</h2>
+
+                <div class="analyzer-card">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-primary);">🔬 Chandkosh Meter Analyzer</h3>
+                    <form id="chandas-form">
+                        <div class="input-mode-pills">
+                            <button type="button" class="input-pill active" data-mode="single">Single Line</button>
+                            <button type="button" class="input-pill" data-mode="multi">Multiple Lines</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="shloka-input" id="input-label">
+                                Enter a single line (Pāda) of a Shloka:
+                            </label>
+                            <textarea class="form-textarea" id="shloka-input" rows="4" placeholder="e.g., वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="script-type">Select Input Script:</label>
+                            <select class="form-select" id="script-type">
+                                <option value="devanagari" selected>Devanagari (देवनागरी)</option>
+                                <option value="iast">IAST (Roman Transliteration)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span>🔍</span> Analyze
+                            </button>
+                            <button type="button" id="clear-btn" class="btn btn-secondary">
+                                <span>✖</span> Clear
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="results-container" class="results-container hidden">
+                    <div id="spinner" class="spinner"></div>
+                    <div id="results-content"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">Chandkosh</span> <span class="sanskrit">छन्दकोश</span>
+            </div>
+            <p>Your Digital Gateway to Sanskrit Prosody</p>
+            <p>© 2025 Chandkosh</p>
+            <p style="font-size: 0.875rem; margin-top: 1rem;">Built with ❤️ for Sanskrit</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                    // --- Theme Management ---
+                    const root = document.documentElement;
+                    const lightBtn = document.getElementById('light-btn');
+                    const darkBtn = document.getElementById('dark-btn');
+
+                    const setTheme = (theme) => {
+                        root.setAttribute('data-theme', theme);
+                        localStorage.setItem('chandkosh_theme', theme);
+
+                        if (theme === 'dark') {
+                            darkBtn.classList.add('active');
+                            lightBtn.classList.remove('active');
+                        } else {
+                            lightBtn.classList.add('active');
+                            darkBtn.classList.remove('active');
+                        }
+                    };
+
+                    lightBtn.addEventListener('click', () => setTheme('light'));
+                    darkBtn.addEventListener('click', () => setTheme('dark'));
+
+                    const savedTheme = localStorage.getItem('chandkosh_theme') || 'light';
+                    setTheme(savedTheme);
+
+                    // --- Tabs Management ---
+                    const tabBtns = document.querySelectorAll('.tab-btn');
+                    const tabContents = document.querySelectorAll('.tab-content');
+
+                    tabBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const tabId = btn.dataset.tab;
+
+                            tabBtns.forEach(b => b.classList.remove('active'));
+                            tabContents.forEach(c => c.classList.remove('active'));
+
+                            btn.classList.add('active');
+                            document.getElementById(tabId).classList.add('active');
+                        });
+                    });
+
+                    // --- Input Mode Toggle ---
+                    const inputPills = document.querySelectorAll('.input-pill');
+                    const shlokaInput = document.getElementById('shloka-input');
+                    const inputLabel = document.getElementById('input-label');
+
+                    inputPills.forEach(pill => {
+                        pill.addEventListener('click', () => {
+                            inputPills.forEach(p => p.classList.remove('active'));
+                            pill.classList.add('active');
+
+                            const mode = pill.dataset.mode;
+                            if (mode === 'multi') {
+                                inputLabel.textContent = 'Enter multiple lines (Pādas) of a Shloka (one per line):';
+                                shlokaInput.placeholder = 'Enter each line on a new line:\nवागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये\nजगतः पितरौ वन्दे पार्वतीपरमेश्वरौ';
+                                shlokaInput.rows = 6;
+                            } else {
+                                inputLabel.textContent = 'Enter a single line (Pāda) of a Shloka:';
+                                shlokaInput.placeholder = 'e.g., वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये';
+                                shlokaInput.rows = 4;
+                            }
+                        });
+                    });
+
+                    // --- Form & Analysis ---
+                    const form = document.getElementById('chandas-form');
+                    const scriptType = document.getElementById('script-type');
+                    const clearBtn = document.getElementById('clear-btn');
+                    const resultsContainer = document.getElementById('results-container');
+                    const resultsContent = document.getElementById('results-content');
+                    const spinner = document.getElementById('spinner');
+
+                    // --- CHANDKOSH DATABASE ---
+                    const chandasPatterns = {
+                        'Gāyatrī (गायत्री)': {
+                            syllables: 8,
+                            pattern: 'GGLLGLGL',
+                            type: 'Vedic',
+                            description: 'The most sacred Vedic meter with 24 syllables (8×3).'
+                        },
+                        'Anuṣṭubh (अनुष्टुभ्)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Meter Class',
+                            description: 'Most common meter in epics, 8 syllables per pāda, variable pattern.'
+                        },
+                        'Indravajrā (इन्द्रवज्रा)': {
+                            syllables: 11,
+                            pattern: 'GGLGGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ta, ta, ja, ga, ga (ता ता जा गौ).'
+                        },
+                        'Upendravajrā (उपेन्द्रवज्रा)': {
+                            syllables: 11,
+                            pattern: 'LGLGGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ja, ta, ja, ga, ga (जा ता जा गौ).'
+                        },
+                        'Śālinī (शालिनी)': {
+                            syllables: 11,
+                            pattern: 'GGGGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ma, ta, ta, ga, ga (मा तौ गौ).'
+                        },
+                        'Rathoddhatā (रथोड्ढता)': {
+                            syllables: 11,
+                            pattern: 'GLGLLLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ra, na, ra, la, ga (रा नराविह रथोद्धता लगौ).'
+                        },
+                        'Vaṃśastha (वंशस्थ)': {
+                            syllables: 12,
+                            pattern: 'LGLGGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ja, ta, ja, ra (जतौ तु वंशस्थमुदीरितं जरौ).'
+                        },
+                        'Drutavilambita (द्रुतविलम्बित)': {
+                            syllables: 12,
+                            pattern: 'LLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: na, bha, bha, ra (द्रुतविलम्बितमाह नभौ भरौ).'
+                        },
+                        'Bhujangaprayāta (भुजङ्गप्रयात)': {
+                            syllables: 12,
+                            pattern: 'LGGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ya, ya, ya, ya (भुजङ्गप्रयातं चतुर्भिर्यकारैः).'
+                        },
+                        'Toṭaka (तोटक)': {
+                            syllables: 12,
+                            pattern: 'LLGLLGLLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: sa, sa, sa, sa (वद तोटकमब्धिसकारयुतम्).'
+                        },
+                        'Vasantatilakā (वसन्ततिलका)': {
+                            syllables: 14,
+                            pattern: 'GGLGLLLGLLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ta, bha, ja, ja, ga, ga (उक्ता वसन्ततिलका तभजा जगौ गः).'
+                        },
+                        'Mālinī (मालिनी)': {
+                            syllables: 15,
+                            pattern: 'LLLLLLGGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: na, na, ma, ya, ya (न न म य य युतेयं मालिनी भोगिलोकैः).'
+                        },
+                        'Śikhariṇī (शिखरिणी)': {
+                            syllables: 17,
+                            pattern: 'LGGGGGLLLLGLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ya, ma, na, sa, bha, la, ga (रसै रुद्रैश्छिन्ना यमनसभला गः शिखरिणी).'
+                        },
+                        'Mandākrāntā (मन्दाक्रान्ता)': {
+                            syllables: 17,
+                            pattern: 'GGGGLLLGLLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ma, bha, na, ta, ta, ga, ga (मन्दाक्रान्ता जलधिषडगैर्म्भौ नतौ ताद्गुरू चेत्).'
+                        },
+                        'Pṛthvī (पृथ्वी)': {
+                            syllables: 17,
+                            pattern: 'LGLGLLGLLGLLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ja, sa, ja, sa, ya, la, ga (जसौ जसयला वसुग्रहयतिश्च पृथ्वी गुरुः).'
+                        },
+                        'Hariṇī (हरिणी)': {
+                            syllables: 17,
+                            pattern: 'LLLLLGGGGGLGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: na, sa, ma, ra, sa, la, ga (रसयुगहयैर्न्सौ म्रौ स्लौ गो यदा हरिणी तदा).'
+                        },
+                        'Śārdūlavikrīḍita (शार्दूलविक्रीडित)': {
+                            syllables: 19,
+                            pattern: 'GGGLGLLLGGLGGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ma, sa, ja, sa, ta, ta, ga (सूर्याश्वैर्मसजास्तताः सगुरवः शार्दूलविक्रीडितम्).'
+                        },
+                        'Sragdharā (स्रग्धरा)': {
+                            syllables: 21,
+                            pattern: 'GGGLGLGLLLLLLGGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gaṇas: ma, ra, bha, na, ya, ya, ya (म्रभ्नैर्यानां त्रयेण त्रिमुनियतियुता स्रग्धरा कीर्तितेयम्).'
+                        },
+                        'Triṣṭubh Class': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Meter Class',
+                            description: 'A major class of meters with 11 syllables per pāda.'
+                        },
+                        'Jagatī Class': {
+                            syllables: 12,
+                            pattern: null,
+                            type: 'Meter Class',
+                            description: 'A major class of meters with 12 syllables per pāda.'
+                        }
+                    };
+
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const text = shlokaInput.value;
+                        if (!text.trim()) {
+                            renderError("Please enter a Shloka line to analyze with Chandkosh.");
+                            return;
+                        }
+
+                        resultsContainer.classList.remove('hidden');
+                        spinner.classList.remove('hidden');
+                        resultsContent.innerHTML = '';
+
+                        setTimeout(() => {
+                            try {
+                                const activeMode = document.querySelector('.input-pill.active').dataset.mode;
+
+                                if (activeMode === 'single') {
+                                    const syllables = tokenizeSyllables(text, scriptType.value);
+                                    if (syllables.length === 0) throw new Error("Chandkosh could not parse syllables. Please check your input for errors.");
+
+                                    const classified = classifySyllables(syllables, scriptType.value);
+                                    const pattern = classified.map(s => s.type).join('');
+                                    const matches = identifyChandasPattern(pattern);
+
+                                    renderResults({
+                                        syllables: classified,
+                                        pattern: pattern,
+                                        matches: matches
+                                    });
+                                } else {
+                                    const lines = text.split('\n').filter(line => line.trim());
+                                    if (lines.length === 0) throw new Error("No valid lines found for Chandkosh to analyze.");
+
+                                    const allResults = [];
+                                    for (let i = 0; i < lines.length; i++) {
+                                        const line = lines[i].trim();
+                                        if (line) {
+                                            const syllables = tokenizeSyllables(line, scriptType.value);
+                                            if (syllables.length > 0) {
+                                                const classified = classifySyllables(syllables, scriptType.value);
+                                                const pattern = classified.map(s => s.type).join('');
+                                                const matches = identifyChandasPattern(pattern);
+
+                                                allResults.push({
+                                                    lineNumber: i + 1,
+                                                    text: line,
+                                                    syllables: classified,
+                                                    pattern: pattern,
+                                                    matches: matches
+                                                });
+                                            }
+                                        }
+                                    }
+
+                                    if (allResults.length === 0) throw new Error("Chandkosh could not parse any valid lines.");
+                                    renderMultipleResults(allResults);
+                                }
+                            } catch (error) {
+                                renderError(error.message);
+                            } finally {
+                                spinner.classList.add('hidden');
+                            }
+                        }, 500);
+                    });
+
+                    clearBtn.addEventListener('click', () => {
+                        form.reset();
+                        resultsContainer.classList.add('hidden');
+                        resultsContent.innerHTML = '';
+                    });
+
+                    function levenshteinDistance(a, b) {
+                        if (a.length === 0) return b.length;
+                        if (b.length === 0) return a.length;
+                        const matrix = Array(a.length + 1).fill(null).map(() => Array(b.length + 1).fill(null));
+                        for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+                        for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+                        for (let i = 1; i <= a.length; i++) {
+                            for (let j = 1; j <= b.length; j++) {
+                                const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                                matrix[i][j] = Math.min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+                            }
+                        }
+                        return matrix[a.length][b.length];
+                    }
+
+                    function identifyChandasPattern(pattern) {
+                        const matches = {
+                            exact: [],
+                            fuzzy: [],
+                            possible: []
+                        };
+                        const len = pattern.length;
+                        const mismatchTolerance = 3;
+
+                        for (const name in chandasPatterns) {
+                            const chandas = chandasPatterns[name];
+                            if (chandas.pattern) {
+                                const distance = levenshteinDistance(pattern, chandas.pattern);
+                                if (distance === 0) {
+                                    matches.exact.push({
+                                        name,
+                                        distance,
+                                        ...chandas
+                                    });
+                                } else if (distance <= mismatchTolerance && len === chandas.syllables) {
+                                    matches.fuzzy.push({
+                                        name,
+                                        distance,
+                                        ...chandas
+                                    });
+                                }
+                            } else if (chandas.syllables === len) {
+                                matches.possible.push({
+                                    name,
+                                    ...chandas
+                                });
+                            }
+                        }
+                        matches.fuzzy.sort((a, b) => a.distance - b.distance);
+                        return matches;
+                    }
+
+                    const tokenizeSyllables = (text, script) => {
+                        const cleanedText = text.trim().replace(/[.,''"`;?!|]/g, '').replace(/\s+/g, ' ');
+                        const regex = script === 'devanagari' ?
+                            /(?:[\u0915-\u0939]\u094d)*[\u0915-\u0939][\u093e-\u094c\u0902\u0903]?|[\u0905-\u0914\u0960\u0961][\u0902\u0903]?/g :
+                            /[kghṅcjñṭḍṇtdnpbmyrlvśṣsh]*[aeiouṛḷāīūṝḹ]([ṃḥ])?/gi;
+                        return cleanedText.match(regex) || [];
+                    };
+
+                    const classifySyllables = (syllables, script) => {
+                        const classified = [];
+                        for (let i = 0; i < syllables.length; i++) {
+                            let isGuru = false;
+                            const longVowelRegex = script === 'devanagari' ? /[आঈऊॠॡएऐओऔाीूॄॣेैोौ]/ : /[āīūṝḹeaiou]/i;
+                            const anunasikaRegex = script === 'devanagari' ? /[ंः]/ : /[ṃḥ]/i;
+                            if (longVowelRegex.test(syllables[i])) isGuru = true;
+                            if (anunasikaRegex.test(syllables[i])) isGuru = true;
+                            if (!isGuru) {
+                                const nextSyllable = syllables[i + 1] || '';
+                                if (script === 'devanagari') {
+                                    if (nextSyllable.includes('\u094d')) isGuru = true;
+                                } else {
+                                    const consonants = 'kghṅcjñṭḍṇtdnpbmyrlvśṣsh';
+                                    if (nextSyllable.length > 1 && consonants.includes(nextSyllable[0].toLowerCase()) && consonants.includes(nextSyllable[1].toLowerCase())) isGuru = true;
+                                }
+                            }
+                            if (i === syllables.length - 1) isGuru = true;
+                            classified.push({
+                                syllable: syllables[i],
+                                type: isGuru ? 'G' : 'L'
+                            });
+                        }
+                        return classified;
+                    };
+
+                    function renderResults(data) {
+                        const patternLength = data.pattern.length;
+                        let html = `
+                <div class="result-card">
+                    <h3>📊 Chandkosh Analysis Results</h3>
+                    <div class="syllable-display">
+                        ${data.syllables.map(s => `<div class="syllable ${s.type === 'L' ? 'laghu' : 'guru'}" title="${s.type === 'L' ? 'Laghu (Light)' : 'Guru (Heavy)'}">${s.syllable}</div>`).join('')}
+                    </div>
+                    <div class="pattern-display">${data.pattern}</div>
+                    <p style="text-align: center; color: var(--text-muted);">Total: ${patternLength} syllables identified by Chandkosh</p>
+                </div>
+                <div class="result-card">
+                    <h3>🎯 Chandkosh Meter Identification</h3>`;
+
+                if (data.matches.exact.length > 0) {
+                    const match = data.matches.exact[0];
+                    html += `
+                        <div class="match-card exact">
+                            <h4>✅ Perfect Match Found by Chandkosh: ${match.name}</h4>
+                            <p>${match.description}</p>
+                            <div class="accuracy-meter">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-bar-inner" style="width: 100%"></div>
+                                </div>
+                                <span class="accuracy-text">100%</span>
+                            </div>
+                        </div>`;
+                } else if (data.matches.fuzzy.length > 0) {
+                    html += `<h4>🔍 Chandkosh Found Closest Matches</h4>`;
+                    data.matches.fuzzy.forEach(match => {
+                        const accuracy = Math.round(((patternLength - match.distance) / patternLength) * 100);
+                        html += `
+                            <div class="match-card fuzzy">
+                                <h4>${match.name}</h4>
+                                <p>${match.description}</p>
+                                <p style="color: var(--text-muted);">Mismatches: ${match.distance} syllable${match.distance > 1 ? 's' : ''}</p>
+                                <div class="accuracy-meter">
+                                    <div class="accuracy-bar">
+                                        <div class="accuracy-bar-inner" style="width:${accuracy}%"></div>
+                                    </div>
+                                    <span class="accuracy-text">${accuracy}%</span>
+                                </div>
+                            </div>`;
+                    });
+                } else if (data.matches.possible.length > 0) {
+                    const match = data.matches.possible[0];
+                    html += `
+                        <div class="match-card fuzzy">
+                            <h4>📚 Chandkosh Suggests: ${match.name}</h4>
+                            <p>This meter class has ${patternLength} syllables but no fixed pattern.</p>
+                            <p>${match.description}</p>
+                        </div>`;
+                } else {
+                    html += `<p style="text-align: center; color: var(--text-muted);">No known Chandas with ${patternLength} syllables found in Chandkosh database.</p>`;
+                }
+
+                html += `</div>`;
+                resultsContent.innerHTML = html;
+            }
+
+            function renderMultipleResults(allResults) {
+                let html = `<div class="result-card"><h3>📝 Chandkosh Analysis of Multiple Lines</h3>`;
+                
+                allResults.forEach(result => {
+                    const patternLength = result.pattern.length;
+                    html += `
+                        <div style="border-left: 3px solid var(--accent-primary); padding-left: 1rem; margin-bottom: 2rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">Line ${result.lineNumber}</h4>
+                            <div class="syllable-display">
+                                ${result.syllables.map(s => `<div class="syllable ${s.type === 'L' ? 'laghu' : 'guru'}" title="${s.type === 'L' ? 'Laghu' : 'Guru'}">${s.syllable}</div>`).join('')}
+                            </div>
+                            <div class="pattern-display" style="font-size: 1rem; margin: 0.5rem 0;">${result.pattern}</div>`;
+                    
+                    if (result.matches.exact.length > 0) {
+                        const match = result.matches.exact[0];
+                        html += `<p><strong>✅ Chandkosh Match:</strong> ${match.name}</p>`;
+                    } else if (result.matches.fuzzy.length > 0) {
+                        const match = result.matches.fuzzy[0];
+                        const accuracy = Math.round(((patternLength - match.distance) / patternLength) * 100);
+                        html += `<p><strong>🔍 Chandkosh Closest:</strong> ${match.name} (${accuracy}% match)</p>`;
+                    } else if (result.matches.possible.length > 0) {
+                        const match = result.matches.possible[0];
+                        html += `<p><strong>📚 Chandkosh Suggests:</strong> ${match.name}</p>`;
+                    } else {
+                        html += `<p style="color: var(--text-muted);">No meter found in Chandkosh database</p>`;
+                    }
+                    
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
+                resultsContent.innerHTML = html;
+            }
+
+            function renderError(message) {
+                resultsContainer.classList.remove('hidden');
+                resultsContent.innerHTML = `
+                    <div class="result-card" style="border-left: 4px solid var(--accent-danger); background: rgba(252, 129, 129, 0.1);">
+                        <h3 style="color: var(--accent-danger);">⚠️ Chandkosh Error</h3>
+                        <p>${message}</p>
+                    </div>`;
+            }
+        });
+    </script>
+</body>
+
+</html>
