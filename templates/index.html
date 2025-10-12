@@ -5,8 +5,20 @@
   <title>Chandas Identifier</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="{{ url_for('static', filename='chandkosh_logo.png') }}" alt="Chandkosh Logo">
+        <p>Chand<span style="font-family:fantasy;">Kosh</span></p>
+      </div>
+      <div class="help">
+      <a href="{{ url_for('help_page') }}" target="_parent"><i class="fa-solid fa-circle-info fa-lg"></i></a>
+       <a href="{{ url_for('help_page') }}" target="_parent">Help</a>
+      </div>
+
+      </nav>
   <div class="wrap">
     <header>
       <h1>Chandas Identifier</h1>
@@ -26,8 +38,11 @@
             <option value="latin" {% if request.form.get('script')=='latin' %}selected{% endif %}>Latin (IAST)</option>
           </select>
         </div>
-
-        <button type="submit">Identify Chandas</button>
+        <div class="button_">
+            <button type="submit">Identify Chandas</button>
+            <button class="clear" type="submit">Clear</button>
+        </div>
+      
       </form>
     </section>
 
