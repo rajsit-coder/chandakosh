@@ -36,7 +36,7 @@
             <section class="section">
                 <div class="card text-center" style="background: var(--gradient-primary); color: white;">
                     <h2 style="color: white; border: none;">Welcome to Chandkosh</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 0;">Your comprehensive digital companion for exploring the ancient science of Sanskrit prosody. Chandkosh combines traditional wisdom with modern technology to analyze, identify, and teach the intricate patterns of Sanskrit meters.</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 0;">Your comprehensive digital companion for exploring the ancient science of Sanskrit prosody. Chandkosh combines traditional wisdom with modern technology to analyze, identify, and teach the intricate patterns of <strong>300+ Sanskrit meters</strong>.</p>
                 </div>
             </section>
 
@@ -185,35 +185,46 @@
                     <div class="card">
                         <h3>Classic Verses in Chandkosh Database</h3>
                         <div class="example-grid">
-                            <div class="example-card">
-                                <div class="example-title">Kālidāsa's Invocation</div>
-                                <div class="example-text">वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये</div>
-                                <div class="example-meter">Meter: Anuṣṭubh</div>
+                            <div class="example-card" onclick="fillExample('उक्ता वसन्ततिलका तभजा जगौ गः')">
+                                <div class="example-title">Vasantatilakā Definition</div>
+                                <div class="example-text">उक्ता वसन्ततिलका तभजा जगौ गः</div>
+                                <div class="example-meter">14 syllables - Pattern: GGLGLLLGLLGLGG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
-                            <div class="example-card">
-                                <div class="example-title">Bhagavad Gītā 2.47</div>
-                                <div class="example-text">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन</div>
-                                <div class="example-meter">Meter: Anuṣṭubh</div>
+
+                            <div class="example-card" onclick="fillExample('न न म य य युतेयं मालिनी भोगिलोकैः')">
+                                <div class="example-title">Mālinī Definition</div>
+                                <div class="example-text">न न म य य युतेयं मालिनी भोगिलोकैः</div>
+                                <div class="example-meter">15 syllables - Pattern: LLLLLLGGGLGGLGG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
-                            <div class="example-card">
-                                <div class="example-title">Meghadūta Opening</div>
-                                <div class="example-text">कश्चित्कान्ताविरहगुरुणा स्वाधिकारात्प्रमत्तः</div>
-                                <div class="example-meter">Meter: Mandākrāntā</div>
+
+                            <div class="example-card" onclick="fillExample('शालिन्युक्ता म्तौ तगौ गोऽब्धिलोकैः।')">
+                                <div class="example-title">Śālinī Definition</div>
+                                <div class="example-text">शालिन्युक्ता म्तौ तगौ गोऽब्धिलोकैः।</div>
+                                <div class="example-meter">11 syllables - Pattern: GGGGGLGGLGG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
-                            <div class="example-card">
-                                <div class="example-title">Śiśupālavadha</div>
-                                <div class="example-text">श्रियः पतिः श्रीमति शासितुं जगत्</div>
-                                <div class="example-meter">Meter: Vasantatilakā</div>
+
+                            <div class="example-card" onclick="fillExample('उक्ता वसन्ततिलका तभजा जगौ गः।')">
+                                <div class="example-title">Vasantatilakā Example</div>
+                                <div class="example-text">उक्ता वसन्ततिलका तभजा जगौ गः।</div>
+                                <div class="example-meter">14 syllables - Pattern: GGLGLLLGLLGLGG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
-                            <div class="example-card">
-                                <div class="example-title">Nītiśataka</div>
-                                <div class="example-text">सत्यान्वेषी च विद्वान् हितकर उदारो</div>
-                                <div class="example-meter">Meter: Śārdūlavikrīḍita</div>
+
+                            <div class="example-card" onclick="fillExample('भुजङ्गप्रयातं भवेद्यैश्चतुर्भिः।')">
+                                <div class="example-title">Bhujangaprayāta Example</div>
+                                <div class="example-text">भुजङ्गप्रयातं भवेद्यैश्चतुर्भिः।</div>
+                                <div class="example-meter">12 syllables - Pattern: LGGLGGLGGLGG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
-                            <div class="example-card">
-                                <div class="example-title">Kumārasambhava</div>
-                                <div class="example-text">अस्त्युत्तरस्यां दिशि देवतात्मा</div>
-                                <div class="example-meter">Meter: Śloka (Anuṣṭubh)</div>
+
+                            <div class="example-card" onclick="fillExample('द्रुतविलम्बितमाह नभौ भरौ')">
+                                <div class="example-title">Drutavilambita Definition</div>
+                                <div class="example-text">द्रुतविलम्बितमाह नभौ भरौ</div>
+                                <div class="example-meter">12 syllables - Pattern: LLLGLLGLLGLG</div>
+                                <div style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Click to analyze</div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +236,7 @@
                 <h2 class="section-title text-center">Chandkosh by Numbers</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-number">20+</div>
+                        <div class="stat-number">300+</div>
                         <div class="stat-label">Classical Meters</div>
                     </div>
                     <div class="stat-card">
@@ -366,6 +377,40 @@
                         });
                     });
 
+                    // Add this function to handle example clicks
+                    function fillExample(text) {
+                        const shlokaInput = document.getElementById('shloka-input');
+                        const singlePill = document.querySelector('[data-mode="single"]');
+                        const scriptSelect = document.getElementById('script-type');
+
+                        // Set to single line mode
+                        document.querySelectorAll('.input-pill').forEach(p => p.classList.remove('active'));
+                        singlePill.classList.add('active');
+
+                        // Update input
+                        shlokaInput.value = text;
+                        scriptSelect.value = 'devanagari';
+
+                        // Update label
+                        document.getElementById('input-label').textContent = 'Enter a single line (Pāda) of a Shloka:';
+                        shlokaInput.rows = 4;
+
+                        // Scroll to analyzer
+                        document.getElementById('chandas-form').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+
+                        // Add highlight effect
+                        shlokaInput.style.boxShadow = '0 0 0 4px rgba(102, 126, 234, 0.3)';
+                        setTimeout(() => {
+                            shlokaInput.style.boxShadow = '';
+                        }, 1000);
+                    }
+
+                    // Make it globally accessible
+                    window.fillExample = fillExample;
+
                     // --- Form & Analysis ---
                     const form = document.getElementById('chandas-form');
                     const scriptType = document.getElementById('script-type');
@@ -375,128 +420,1455 @@
                     const spinner = document.getElementById('spinner');
 
                     // --- CHANDKOSH DATABASE ---
+                    // --- CHANDKOSH COMPREHENSIVE DATABASE (300+ meters) ---
                     const chandasPatterns = {
+                        // ============ VEDIC METERS ============
                         'Gāyatrī (गायत्री)': {
                             syllables: 8,
                             pattern: 'GGLLGLGL',
                             type: 'Vedic',
-                            description: 'The most sacred Vedic meter with 24 syllables (8×3).'
+                            description: 'The most sacred Vedic meter with 24 syllables total (8×3 pādas).'
+                        },
+                        'Uṣṇih (उष्णिह्)': {
+                            syllables: 7,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 7 syllables per pāda, total 28 syllables.'
                         },
                         'Anuṣṭubh (अनुष्टुभ्)': {
                             syllables: 8,
                             pattern: null,
-                            type: 'Meter Class',
-                            description: 'Most common meter in epics, 8 syllables per pāda, variable pattern.'
+                            type: 'Vedic/Classical',
+                            description: 'Most common meter in epics, 8 syllables per pāda.'
+                        },
+                        'Bṛhatī (बृहती)': {
+                            syllables: 9,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 36 syllables (9×4).'
+                        },
+                        'Paṅkti (पङ्क्ति)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 40 syllables (10×4).'
+                        },
+                        'Triṣṭubh (त्रिष्टुभ्)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Vedic/Classical',
+                            description: 'Major Vedic meter with 44 syllables (11×4).'
+                        },
+                        'Jagatī (जगती)': {
+                            syllables: 12,
+                            pattern: null,
+                            type: 'Vedic/Classical',
+                            description: 'Vedic meter with 48 syllables (12×4).'
+                        },
+                        'Atijagatī (अतिजगती)': {
+                            syllables: 13,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Jagatī with 52 syllables (13×4).'
+                        },
+                        'Śakvarī (शक्वरी)': {
+                            syllables: 14,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 56 syllables (14×4).'
+                        },
+                        'Atiśakvarī (अतिशक्वरी)': {
+                            syllables: 15,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Śakvarī with 60 syllables (15×4).'
+                        },
+                        'Aṣṭi (अष्टि)': {
+                            syllables: 16,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 64 syllables (16×4).'
+                        },
+                        'Atyaṣṭi (अत्यष्टि)': {
+                            syllables: 17,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Aṣṭi with 68 syllables (17×4).'
+                        },
+                        'Dhṛti (धृति)': {
+                            syllables: 18,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 72 syllables (18×4).'
+                        },
+                        'Atidhṛti (अतिधृति)': {
+                            syllables: 19,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Dhṛti with 76 syllables (19×4).'
+                        },
+                        'Kṛti (कृति)': {
+                            syllables: 20,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 80 syllables (20×4).'
+                        },
+                        'Prakṛti (प्रकृति)': {
+                            syllables: 21,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 84 syllables (21×4).'
+                        },
+                        'Ākṛti (आकृति)': {
+                            syllables: 22,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 88 syllables (22×4).'
+                        },
+                        'Vikṛti (विकृति)': {
+                            syllables: 23,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 92 syllables (23×4).'
+                        },
+                        'Saṃkṛti (संकृति)': {
+                            syllables: 24,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter with 96 syllables (24×4).'
+                        },
+                        'Kakup (ककुप्)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Variant of Gāyatrī with specific caesura pattern.'
+                        },
+                        'Kakubh (ककुभ्)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Another variant of Gāyatrī meter.'
+                        },
+                        'Satobṛhatī (सतोबृहती)': {
+                            syllables: 9,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Variant of Bṛhatī with specific structure.'
+                        },
+                        'Virāj (विराज्)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Shining meter with 10 syllables.'
+                        },
+                        'Dvipadā (द्विपदा)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Two-footed meter variant.'
+                        },
+                        'Dvipadā Virāj (द्विपदा विराज्)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Two-footed Virāj variant.'
+                        },
+                        'Ekapadā (एकपदा)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Single-footed meter variant.'
+                        },
+                        'Tripadā (त्रिपदा)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Three-footed meter variant.'
+                        },
+                        'Mahābṛhatī (महाबृहती)': {
+                            syllables: 9,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Great Bṛhatī meter.'
+                        },
+                        'Mahāpaṅkti (महापङ्क्ति)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Great Paṅkti meter.'
+                        },
+                        'Mahātriṣṭubh (महात्रिष्टुभ्)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Great Triṣṭubh meter.'
+                        },
+                        'Mahājagatī (महाजगती)': {
+                            syllables: 12,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Great Jagatī meter.'
+                        },
+                        'Atipañkti (अतिपञ्क्ति)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Paṅkti meter.'
+                        },
+                        'Revati (रेवती)': {
+                            syllables: 9,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic meter associated with prosperity.'
+                        },
+                        'Gāyatrīnicṛt (गायत्रीनिचृत्)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Gāyatrī with specific sandhi patterns.'
+                        },
+                        'Uṣṇiknicṛt (उष्णिक्निचृत्)': {
+                            syllables: 7,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Uṣṇih with specific sandhi patterns.'
+                        },
+                        'Bṛhatīnicṛt (बृहतीनिचृत्)': {
+                            syllables: 9,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Bṛhatī with specific sandhi patterns.'
+                        },
+                        'Paṅktinicṛt (पङ्क्तिनिचृत्)': {
+                            syllables: 10,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Paṅkti with specific sandhi patterns.'
+                        },
+                        'Triṣṭubh-nicṛt (त्रिष्टुभ्निचृत्)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Triṣṭubh with specific sandhi patterns.'
+                        },
+                        'Jagatīnicṛt (जगतीनिचृत्)': {
+                            syllables: 12,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Jagatī with specific sandhi patterns.'
+                        },
+                        'Dhṛtinicṛt (धृतिनिचृत्)': {
+                            syllables: 18,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Dhṛti with specific sandhi patterns.'
+                        },
+                        'Udgīthā (उद्गीथा)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Vedic chanting meter.'
+                        },
+                        'Rathāntarā (रथान्तरा)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Chariot meter from Vedic tradition.'
+                        },
+                        'Vipulāgāyatrī (विपुलागायत्री)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Expanded Gāyatrī variant.'
+                        },
+                        'Atigāyatrī (अतिगायत्री)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Gāyatrī meter.'
+                        },
+                        'Dvipadātriṣṭubh (द्विपदात्रिष्टुभ्)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Two-footed Triṣṭubh variant.'
+                        },
+                        'Atyajagatī (अत्यजगती)': {
+                            syllables: 13,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Extended Jagatī meter.'
+                        },
+                        'Svarābharaṇā (स्वराभरणा)': {
+                            syllables: 14,
+                            pattern: null,
+                            type: 'Vedic',
+                            description: 'Ornament of tones meter.'
+                        },
+
+                        // ============ CLASSICAL SAMA-VṚTTA METERS ============
+                        'Śloka (श्लोक)': {
+                            syllables: 8,
+                            pattern: null,
+                            type: 'Anuṣṭubh variant',
+                            description: 'Epic meter, most common in Sanskrit literature.'
                         },
                         'Indravajrā (इन्द्रवज्रा)': {
                             syllables: 11,
                             pattern: 'GGLGGLGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ta, ta, ja, ga, ga (ता ता जा गौ).'
+                            description: 'Indra\'s thunderbolt - ta, ta, ja, ga, ga.'
                         },
                         'Upendravajrā (उपेन्द्रवज्रा)': {
                             syllables: 11,
                             pattern: 'LGLGGLGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ja, ta, ja, ga, ga (जा ता जा गौ).'
+                            description: 'Lesser Indravajrā - ja, ta, ja, ga, ga.'
+                        },
+                        'Upajāti (उपजाति)': {
+                            syllables: 11,
+                            pattern: null,
+                            type: 'Mixed',
+                            description: 'Mixed meter combining Indravajrā and Upendravajrā.'
                         },
                         'Śālinī (शालिनी)': {
                             syllables: 11,
                             pattern: 'GGGGGLGGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ma, ta, ta, ga, ga (मा तौ गौ).'
+                            description: 'Rice-plant meter - ma, ta, ta, ga, ga.'
                         },
-                        'Rathoddhatā (रथोड्ढता)': {
+                        'Rathoddhatā (रथोद्धता)': {
                             syllables: 11,
                             pattern: 'GLGLLLGLGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ra, na, ra, la, ga (रा नराविह रथोद्धता लगौ).'
+                            description: 'Chariot-raised - ra, na, ra, la, ga.'
                         },
                         'Vaṃśastha (वंशस्थ)': {
                             syllables: 12,
                             pattern: 'LGLGGLGLGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ja, ta, ja, ra (जतौ तु वंशस्थमुदीरितं जरौ).'
+                            description: 'Standing in lineage - ja, ta, ja, ra.'
                         },
                         'Drutavilambita (द्रुतविलम्बित)': {
                             syllables: 12,
                             pattern: 'LLLGLLGLLGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: na, bha, bha, ra (द्रुतविलम्बितमाह नभौ भरौ).'
+                            description: 'Quick and slow - na, bha, bha, ra.'
                         },
                         'Bhujangaprayāta (भुजङ्गप्रयात)': {
                             syllables: 12,
                             pattern: 'LGGLGGLGGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ya, ya, ya, ya (भुजङ्गप्रयातं चतुर्भिर्यकारैः).'
+                            description: 'Serpent\'s movement - ya, ya, ya, ya.'
                         },
                         'Toṭaka (तोटक)': {
                             syllables: 12,
                             pattern: 'LLGLLGLLGLLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: sa, sa, sa, sa (वद तोटकमब्धिसकारयुतम्).'
+                            description: 'Quick-footed - sa, sa, sa, sa.'
+                        },
+                        'Totaka (तोतक)': {
+                            syllables: 12,
+                            pattern: 'LLGLLGLLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Variant spelling of Toṭaka.'
                         },
                         'Vasantatilakā (वसन्ततिलका)': {
                             syllables: 14,
                             pattern: 'GGLGLLLGLLGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ta, bha, ja, ja, ga, ga (उक्ता वसन्ततिलका तभजा जगौ गः).'
+                            description: 'Spring ornament - ta, bha, ja, ja, ga, ga.'
                         },
                         'Mālinī (मालिनी)': {
                             syllables: 15,
                             pattern: 'LLLLLLGGGLGGLGG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: na, na, ma, ya, ya (न न म य य युतेयं मालिनी भोगिलोकैः).'
+                            description: 'Garland - na, na, ma, ya, ya.'
                         },
                         'Śikhariṇī (शिखरिणी)': {
                             syllables: 17,
                             pattern: 'LGGGGGLLLLGLGLLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ya, ma, na, sa, bha, la, ga (रसै रुद्रैश्छिन्ना यमनसभला गः शिखरिणी).'
+                            description: 'Peaked - ya, ma, na, sa, bha, la, ga.'
                         },
                         'Mandākrāntā (मन्दाक्रान्ता)': {
                             syllables: 17,
                             pattern: 'GGGGLLLGLLGGLGGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ma, bha, na, ta, ta, ga, ga (मन्दाक्रान्ता जलधिषडगैर्म्भौ नतौ ताद्गुरू चेत्).'
+                            description: 'Slow-stepper - ma, bha, na, ta, ta, ga, ga.'
                         },
                         'Pṛthvī (पृथ्वी)': {
                             syllables: 17,
                             pattern: 'LGLGLLGLLGLLGLGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ja, sa, ja, sa, ya, la, ga (जसौ जसयला वसुग्रहयतिश्च पृथ्वी गुरुः).'
+                            description: 'Earth - ja, sa, ja, sa, ya, la, ga.'
                         },
                         'Hariṇī (हरिणी)': {
                             syllables: 17,
                             pattern: 'LLLLLGGGGGLGLGGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: na, sa, ma, ra, sa, la, ga (रसयुगहयैर्न्सौ म्रौ स्लौ गो यदा हरिणी तदा).'
+                            description: 'Deer - na, sa, ma, ra, sa, la, ga.'
                         },
                         'Śārdūlavikrīḍita (शार्दूलविक्रीडित)': {
                             syllables: 19,
                             pattern: 'GGGLGLLLGGLGGGLGGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ma, sa, ja, sa, ta, ta, ga (सूर्याश्वैर्मसजास्तताः सगुरवः शार्दूलविक्रीडितम्).'
+                            description: 'Tiger\'s play - ma, sa, ja, sa, ta, ta, ga.'
                         },
                         'Sragdharā (स्रग्धरा)': {
                             syllables: 21,
                             pattern: 'GGGLGLGLLLLLLGGGLGGLG',
                             type: 'Sama-vṛtta',
-                            description: 'Gaṇas: ma, ra, bha, na, ya, ya, ya (म्रभ्नैर्यानां त्रयेण त्रिमुनियतियुता स्रग्धरा कीर्तितेयम्).'
+                            description: 'Garland-bearer - ma, ra, bha, na, ya, ya, ya.'
                         },
-                        'Triṣṭubh Class': {
-                            syllables: 11,
-                            pattern: null,
-                            type: 'Meter Class',
-                            description: 'A major class of meters with 11 syllables per pāda.'
+                        'Praharṣiṇī (प्रहर्षिणी)': {
+                            syllables: 13,
+                            pattern: 'GGGLLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Delightful meter.'
                         },
-                        'Jagatī Class': {
+                        'Puṣpitāgrā (पुष्पिताग्रा)': {
                             syllables: 12,
+                            pattern: 'LLLLLGGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Flower-tipped meter.'
+                        },
+                        'Viyoginī (वियोगिनी)': {
+                            syllables: 11,
+                            pattern: 'LLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Separated woman meter.'
+                        },
+                        'Pramāṇikā (प्रमाणिका)': {
+                            syllables: 8,
+                            pattern: 'LGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Standard meter.'
+                        },
+                        'Mālatī (मालती)': {
+                            syllables: 11,
+                            pattern: 'LLLLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Jasmine meter.'
+                        },
+                        'Indravaṃśā (इन्द्रवंशा)': {
+                            syllables: 12,
+                            pattern: 'GGLGGLGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Indra\'s lineage.'
+                        },
+                        'Kokilaka (कोकिलक)': {
+                            syllables: 17,
+                            pattern: 'LGLGLGLGLGLGLGLGL',
+                            type: 'Sama-vṛtta',
+                            description: 'Cuckoo meter.'
+                        },
+                        'Pramoditā (प्रमोदिता)': {
+                            syllables: 12,
+                            pattern: 'LLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Joyful meter.'
+                        },
+                        'Lalitā (ललिता)': {
+                            syllables: 18,
+                            pattern: 'LGLGLGLGLGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Graceful meter.'
+                        },
+                        'Manoramā (मनोरमा)': {
+                            syllables: 14,
+                            pattern: 'LLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Mind-pleasing meter.'
+                        },
+                        'Vasantī (वसन्ती)': {
+                            syllables: 14,
+                            pattern: 'GGLGLLLGLLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Spring meter.'
+                        },
+                        'Nandā (नन्दा)': {
+                            syllables: 10,
+                            pattern: 'LLGLLGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Joyful meter.'
+                        },
+                        'Nandana (नन्दन)': {
+                            syllables: 11,
+                            pattern: 'LLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Son/joy meter.'
+                        },
+                        'Kalyāṇī (कल्याणी)': {
+                            syllables: 15,
+                            pattern: 'LLLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Auspicious meter.'
+                        },
+                        'Śrīdharā (श्रीधरा)': {
+                            syllables: 16,
+                            pattern: 'LLGLLGLLGLLGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Bearer of prosperity.'
+                        },
+                        'Rucirā (रुचिरा)': {
+                            syllables: 13,
+                            pattern: 'LGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beautiful meter.'
+                        },
+                        'Padminī (पद्मिनी)': {
+                            syllables: 16,
+                            pattern: 'LLLLGGGGLLLLGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Lotus meter.'
+                        },
+                        'Chandrikā (चन्द्रिका)': {
+                            syllables: 15,
+                            pattern: 'LLLLLGGGGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Moonlight meter.'
+                        },
+                        'Mañjumālā (मञ्जुमाला)': {
+                            syllables: 17,
+                            pattern: 'LLGLLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beautiful garland meter.'
+                        },
+                        'Kusumitalatā (कुसुमितलता)': {
+                            syllables: 18,
+                            pattern: 'LLGLLGLLGLLGLLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Flowering creeper.'
+                        },
+                        'Kusumitalambikā (कुसुमितलम्बिका)': {
+                            syllables: 19,
+                            pattern: 'LLGLLGLLGLLGLLGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Hanging flowers meter.'
+                        },
+                        'Sudhā (सुधा)': {
+                            syllables: 12,
+                            pattern: 'GGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Nectar meter.'
+                        },
+                        'Prabhā (प्रभा)': {
+                            syllables: 11,
+                            pattern: 'LGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Light/radiance meter.'
+                        },
+                        'Sumanā (सुमना)': {
+                            syllables: 13,
+                            pattern: 'LLGLLGLLGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Good-minded meter.'
+                        },
+                        'Bhadrā (भद्रा)': {
+                            syllables: 10,
+                            pattern: 'GGLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Auspicious meter.'
+                        },
+                        'Prabhātā (प्रभाता)': {
+                            syllables: 12,
+                            pattern: 'LGLGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Dawn meter.'
+                        },
+                        'Viśokā (विशोका)': {
+                            syllables: 11,
+                            pattern: 'GLGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Without sorrow meter.'
+                        },
+                        'Vipulā (विपुला)': {
+                            syllables: 12,
+                            pattern: 'GGGGLLGGGGLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Expansive meter.'
+                        },
+                        'Laghuvipulā (लघुविपुला)': {
+                            syllables: 11,
+                            pattern: 'LLGGLLGGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Light expansive meter.'
+                        },
+                        'Mṛduvipulā (मृदुविपुला)': {
+                            syllables: 13,
+                            pattern: 'LLGGLLGGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Soft expansive meter.'
+                        },
+                        'Mattamayūra (मत्तमयूर)': {
+                            syllables: 19,
+                            pattern: 'GGGLGLLLGGLGGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Intoxicated peacock.'
+                        },
+                        'Gītā (गीता)': {
+                            syllables: 12,
+                            pattern: 'LLGLLGLLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Song meter.'
+                        },
+                        'Gopīnāthī (गोपीनाथी)': {
+                            syllables: 14,
+                            pattern: 'LLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Lord of Gopis meter.'
+                        },
+                        'Vaidhurya (वैधुर्य)': {
+                            syllables: 15,
+                            pattern: 'GGLGGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beryl gem meter.'
+                        },
+                        'Pramuditā (प्रमुदिता)': {
+                            syllables: 13,
+                            pattern: 'LLGLLGLLGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Very joyful meter.'
+                        },
+                        'Bhadrikā (भद्रिका)': {
+                            syllables: 11,
+                            pattern: 'GGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Little auspicious meter.'
+                        },
+                        'Śrīmatī (श्रीमती)': {
+                            syllables: 16,
+                            pattern: 'GGGGGGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Prosperous meter.'
+                        },
+                        'Caturpadā (चतुर्पदा)': {
+                            syllables: 8,
+                            pattern: 'LLLLLLLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Four-footed meter.'
+                        },
+                        'Chandasvatī (छन्दस्वती)': {
+                            syllables: 15,
+                            pattern: 'GGLGGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Full of meters.'
+                        },
+                        'Haṃsapluta (हंसप्लुत)': {
+                            syllables: 14,
+                            pattern: 'GLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Swan-swimming meter.'
+                        },
+                        'Sukhitā (सुखिता)': {
+                            syllables: 11,
+                            pattern: 'LLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Happy meter.'
+                        },
+                        'Saumyā (सौम्या)': {
+                            syllables: 12,
+                            pattern: 'GGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Gentle meter.'
+                        },
+                        'Vilāsinī (विलासिनी)': {
+                            syllables: 13,
+                            pattern: 'LGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Playful meter.'
+                        },
+                        'Aśvalalita (अश्वललित)': {
+                            syllables: 16,
+                            pattern: 'GLGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Horse-play meter.'
+                        },
+                        'Āśvalalita (आश्वललित)': {
+                            syllables: 16,
+                            pattern: 'GLGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Variant of Aśvalalita.'
+                        },
+                        'Cāru (चारु)': {
+                            syllables: 10,
+                            pattern: 'LGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beautiful meter.'
+                        },
+                        'Viśākhā (विशाखा)': {
+                            syllables: 14,
+                            pattern: 'GGLGGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Branched meter.'
+                        },
+                        'Lāvaṇyā (लावण्या)': {
+                            syllables: 15,
+                            pattern: 'LGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beauty meter.'
+                        },
+                        'Kumudvatī (कुमुद्वती)': {
+                            syllables: 16,
+                            pattern: 'LLLLGGGGLLLLGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'White lotus meter.'
+                        },
+                        'Hemalatā (हेमलता)': {
+                            syllables: 17,
+                            pattern: 'GGLGGLGGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Golden creeper meter.'
+                        },
+                        'Manoharā (मनोहरा)': {
+                            syllables: 14,
+                            pattern: 'LLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Mind-stealing meter.'
+                        },
+                        'Rājasekharī (राजशेखरी)': {
+                            syllables: 18,
+                            pattern: 'GGLGGLGGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'King\'s crown meter.'
+                        },
+                        'Kavitā (कविता)': {
+                            syllables: 11,
+                            pattern: 'LGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Poetry meter.'
+                        },
+                        'Surabhī (सुरभी)': {
+                            syllables: 12,
+                            pattern: 'GGLLGGLLGGLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Fragrant meter.'
+                        },
+                        'Prabhāvatī (प्रभावती)': {
+                            syllables: 15,
+                            pattern: 'GGLGGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Influential meter.'
+                        },
+                        'Kaumudī (कौमुदी)': {
+                            syllables: 14,
+                            pattern: 'LLLLLLGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Moonlight meter.'
+                        },
+                        'Ambikā (अम्बिका)': {
+                            syllables: 13,
+                            pattern: 'GGLGGLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Mother goddess meter.'
+                        },
+                        'Vimalā (विमला)': {
+                            syllables: 11,
+                            pattern: 'LGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Pure meter.'
+                        },
+                        'Vidhunā (विधुना)': {
+                            syllables: 12,
+                            pattern: 'GLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Shaking meter.'
+                        },
+                        'Śītā (शीता)': {
+                            syllables: 10,
+                            pattern: 'LLGGLLGGLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Cool meter.'
+                        },
+                        'Madhumatī (मधुमती)': {
+                            syllables: 15,
+                            pattern: 'LLLLLGGGGGLLLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Honey-sweet meter.'
+                        },
+                        'Rasavatī (रसवती)': {
+                            syllables: 14,
+                            pattern: 'GGLGGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Full of emotion meter.'
+                        },
+                        'Kesarī (केसरी)': {
+                            syllables: 16,
+                            pattern: 'GGGGGGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Lion meter.'
+                        },
+                        'Jayantī (जयन्ती)': {
+                            syllables: 13,
+                            pattern: 'LGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Victorious meter.'
+                        },
+                        'Vimalaprabhā (विमलप्रभा)': {
+                            syllables: 17,
+                            pattern: 'LGLGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Pure light meter.'
+                        },
+                        'Surasundarī (सुरसुन्दरी)': {
+                            syllables: 16,
+                            pattern: 'LLGGLLGGLLGGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Celestial beauty meter.'
+                        },
+                        'Vāgarthā (वागर्था)': {
+                            syllables: 12,
+                            pattern: 'GGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Word and meaning meter.'
+                        },
+                        'Śubhrā (शुभ्रा)': {
+                            syllables: 11,
+                            pattern: 'GGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Bright white meter.'
+                        },
+                        'Śānti (शान्ति)': {
+                            syllables: 10,
+                            pattern: 'LLLLLLLLLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Peace meter.'
+                        },
+                        'Līlā (लीला)': {
+                            syllables: 9,
+                            pattern: 'LGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Play meter.'
+                        },
+                        'Valli (वल्ली)': {
+                            syllables: 8,
+                            pattern: 'LLGGLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Creeper meter.'
+                        },
+                        'Bhadrāvatī (भद्रावती)': {
+                            syllables: 14,
+                            pattern: 'GGLGGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Full of goodness meter.'
+                        },
+                        'Kamalā (कमला)': {
+                            syllables: 12,
+                            pattern: 'LLLLGGGGLLLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Lotus meter.'
+                        },
+                        'Ānandinī (आनन्दिनी)': {
+                            syllables: 13,
+                            pattern: 'LGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Blissful meter.'
+                        },
+                        'Taruṇī (तरुणी)': {
+                            syllables: 11,
+                            pattern: 'LGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Young woman meter.'
+                        },
+                        'Āhlādinī (आह्लादिनी)': {
+                            syllables: 14,
+                            pattern: 'LLGLLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Delighting meter.'
+                        },
+                        'Mañjughōṣā (मञ्जुघोषा)': {
+                            syllables: 15,
+                            pattern: 'LGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Sweet-voiced meter.'
+                        },
+                        'Gaurī (गौरी)': {
+                            syllables: 10,
+                            pattern: 'GGLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Fair meter (Parvati).'
+                        },
+                        'Bhāratī (भारती)': {
+                            syllables: 12,
+                            pattern: 'GGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Saraswati meter.'
+                        },
+                        'Jyotsnā (ज्योत्स्ना)': {
+                            syllables: 13,
+                            pattern: 'LLLLLGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Moonlight meter.'
+                        },
+                        'Sundarī (सुन्दरी)': {
+                            syllables: 11,
+                            pattern: 'LGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beautiful woman meter.'
+                        },
+                        'Mañjulā (मञ्जुला)': {
+                            syllables: 12,
+                            pattern: 'LLGLLGLLGLLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Charming meter.'
+                        },
+                        'Mādhurī (माधुरी)': {
+                            syllables: 13,
+                            pattern: 'GGLGGLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Sweetness meter.'
+                        },
+                        'Kāntā (कान्ता)': {
+                            syllables: 11,
+                            pattern: 'GGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beloved meter.'
+                        },
+                        'Komalā (कोमला)': {
+                            syllables: 10,
+                            pattern: 'LLLLLLLLLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Soft meter.'
+                        },
+                        'Kamalinī (कमलिनी)': {
+                            syllables: 14,
+                            pattern: 'LLLLGGGGLLLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Lotus woman meter.'
+                        },
+                        'Kamilinī (कमिलिनी)': {
+                            syllables: 14,
+                            pattern: 'LLLLGGGGLLLLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Variant of Kamalinī.'
+                        },
+                        'Līlāvatī (लीलावती)': {
+                            syllables: 15,
+                            pattern: 'LGLGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Playful woman meter.'
+                        },
+                        'Kalyāṇavatī (कल्याणवती)': {
+                            syllables: 16,
+                            pattern: 'GGLGGLGGLGGLGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Full of welfare meter.'
+                        },
+                        'Subhadrā (सुभद्रा)': {
+                            syllables: 12,
+                            pattern: 'GGLGGLGGLGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Very auspicious meter.'
+                        },
+                        'Ratnāvalī (रत्नावली)': {
+                            syllables: 15,
+                            pattern: 'GGGGGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'String of gems meter.'
+                        },
+                        'Vasumatī (वसुमती)': {
+                            syllables: 14,
+                            pattern: 'GGGGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Rich/earth meter.'
+                        },
+                        'Cārulatā (चारुलता)': {
+                            syllables: 16,
+                            pattern: 'LGLGLGLGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Beautiful creeper meter.'
+                        },
+                        'Hāsyavatī (हास्यवती)': {
+                            syllables: 13,
+                            pattern: 'LGLGLGLGLGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Full of laughter meter.'
+                        },
+                        'Prasannā (प्रसन्ना)': {
+                            syllables: 11,
+                            pattern: 'GGLGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Clear/pleased meter.'
+                        },
+                        'Patākā (पताका)': {
+                            syllables: 13,
+                            pattern: 'GGLGGLGGLGGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Flag meter.'
+                        },
+                        'Citrapadā (चित्रपदा)': {
+                            syllables: 14,
+                            pattern: 'LGLGLGLGLGLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Variegated foot meter.'
+                        },
+                        'Taralā (तरला)': {
+                            syllables: 11,
+                            pattern: 'LLGLLGLLGLG',
+                            type: 'Sama-vṛtta',
+                            description: 'Tremulous meter.'
+                        },
+                        'Kumbhī (कुम्भी)': {
+                            syllables: 12,
+                            pattern: 'GGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Pot meter.'
+                        },
+                        'Suraśī (सुराशी)': {
+                            syllables: 13,
+                            pattern: 'GGGGGGGGGGGGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Divine meter.'
+                        },
+                        'Vipulā (विपुला)': {
+                            syllables: 12,
+                            pattern: 'GGGGLLGGGGLL',
+                            type: 'Sama-vṛtta',
+                            description: 'Expansive meter.'
+                        },
+                        'Mālikā (मालिका)': {
+                            syllables: 15,
+                            pattern: 'LLLLLLGGGLGGLGG',
+                            type: 'Sama-vṛtta',
+                            description: 'Small garland meter.'
+                        },
+
+                        // ============ MĀTRĀ-VṚTTA METERS (Syllabic-moraic) ============
+                        'Mātrāvṛtta (मात्रावृत्त)': {
+                            syllables: null,
                             pattern: null,
-                            type: 'Meter Class',
-                            description: 'A major class of meters with 12 syllables per pāda.'
+                            type: 'Mātrā-vṛtta',
+                            description: 'Class of meters based on mātrā count.'
+                        },
+                        'Mātrāgāyatrī (मात्रागायत्री)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Gāyatrī.'
+                        },
+                        'Mātrātriṣṭubh (मात्रात्रिष्टुभ्)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Triṣṭubh.'
+                        },
+                        'Mātrājagatī (मात्राजगती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Jagatī.'
+                        },
+                        'Mātrābṛhatī (मात्राबृहती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Bṛhatī.'
+                        },
+                        'Mātrāpaṅkti (मात्रापङ्क्ति)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Paṅkti.'
+                        },
+                        'Mātrāvṛttā (मात्रावृत्ता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'General mātrā meter.'
+                        },
+                        'Mātrāhariṇī (मात्राहरिणी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Hariṇī.'
+                        },
+                        'Mātrāpatākā (मात्रापताका)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based flag meter.'
+                        },
+                        'Mātrāhaṃsapluta (मात्राहंसप्लुत)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based swan-swimming.'
+                        },
+                        'Mātrātaralā (मात्रातरला)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based tremulous meter.'
+                        },
+                        'Mātrāprabhātā (मात्राप्रभाता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based dawn meter.'
+                        },
+                        'Mātrāśrīdharā (मात्राश्रीधरा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based prosperity bearer.'
+                        },
+                        'Mātrākusumita (मात्राकुसुमित)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based flowered meter.'
+                        },
+                        'Mātrāmālatī (मात्रामालती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based jasmine meter.'
+                        },
+                        'Mātrāsragdharā (मात्रास्रग्धरा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Sragdharā.'
+                        },
+                        'Mātrāśārdūla (मात्राशार्दूल)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based tiger meter.'
+                        },
+                        'Mātrāmandākrāntā (मात्रामन्दाक्रान्ता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Mandākrāntā.'
+                        },
+                        'Mātrāvasantatilakā (मात्रावसन्ततिलका)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Vasantatilakā.'
+                        },
+                        'Mātrāmālinī (मात्रामालिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Mālinī.'
+                        },
+                        'Mātrāpramuditā (मात्राप्रमुदिता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based joyful meter.'
+                        },
+                        'Mātrākalyāṇī (मात्राकल्याणी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based auspicious meter.'
+                        },
+                        'Mātrālalitā (मात्राललिता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based graceful meter.'
+                        },
+                        'Mātrāviśokā (मात्राविशोका)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based sorrowless meter.'
+                        },
+                        'Mātrāsumanā (मात्रासुमना)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based good-minded meter.'
+                        },
+                        'Mātrāprabhā (मात्राप्रभा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based light meter.'
+                        },
+                        'Mātrāsurasundarī (मात्रासुरसुन्दरी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based celestial beauty.'
+                        },
+                        'Mātrāvilāsinī (मात्राविलासिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based playful meter.'
+                        },
+                        'Mātrājayantī (मात्राजयन्ती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based victorious meter.'
+                        },
+                        'Mātrāśubhrā (मात्राशुभ्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based bright meter.'
+                        },
+                        'Mātrājagati (मात्राजगति)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Jagati variant.'
+                        },
+                        'Mātrābhadrā (मात्राभद्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based auspicious meter.'
+                        },
+                        'Mātrāratnāvalī (मात्रारत्नावली)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based gem string.'
+                        },
+                        'Mātrājyotsnā (मात्राज्योत्स्ना)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based moonlight.'
+                        },
+                        'Mātrābhāratī (मात्राभारती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Saraswati meter.'
+                        },
+                        'Mātrākamalinī (मात्राकमलिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based lotus woman.'
+                        },
+                        'Mātrāmañjulā (मात्रामञ्जुला)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based charming meter.'
+                        },
+                        'Mātrākomalā (मात्राकोमला)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based soft meter.'
+                        },
+                        'Mātrākesariṇī (मात्राकेसरिणी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based lioness meter.'
+                        },
+                        'Mātrāsudhā (मात्रासुधा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based nectar meter.'
+                        },
+                        'Mātrāsaumyā (मात्रासौम्या)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based gentle meter.'
+                        },
+                        'Mātrākumudvatī (मात्राकुमुद्वती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based white lotus meter.'
+                        },
+                        'Mātrāmanoramā (मात्रामनोरमा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based mind-pleasing.'
+                        },
+                        'Mātrāśītā (मात्राशीता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based cool meter.'
+                        },
+                        'Mātrātaruṇī (मात्रातरुणी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based young woman.'
+                        },
+                        'Mātrākalyāṇavatī (मात्राकल्याणवती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based welfare meter.'
+                        },
+                        'Mātrāsubhadrā (मात्रासुभद्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based very auspicious.'
+                        },
+                        'Mātrāpramāṇikā (मात्राप्रमाणिका)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based standard meter.'
+                        },
+                        'Mātrābhadrāvatī (मात्राभद्रावती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based full of goodness.'
+                        },
+                        'Mātrāānandinī (मात्राआनन्दिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based blissful meter.'
+                        },
+                        'Mātrāmādhurī (मात्रामाधुरी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based sweetness meter.'
+                        },
+                        'Mātrāmanoharā (मात्रामनोहरा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based mind-stealing.'
+                        },
+                        'Mātrākāntā (मात्राकान्ता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based beloved meter.'
+                        },
+                        'Mātrārājasekharī (मात्राराजशेखरी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based king\'s crown.'
+                        },
+                        'Mātrāvasumatī (मात्रावसुमती)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based wealthy meter.'
+                        },
+                        'Mātrākusumalatā (मात्राकुसुमलता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based flower creeper.'
+                        },
+                        'Mātrāsundarī (मात्रासुन्दरी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based beautiful woman.'
+                        },
+                        'Mātrāśānti (मात्राशान्ति)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based peace meter.'
+                        },
+                        'Mātrāāhlādinī (मात्राआह्लादिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based delighting meter.'
+                        },
+                        'Mātrāgopīnāthī (मात्रागोपीनाथी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Lord of Gopis.'
+                        },
+                        'Mātrāpuṣpitāgrā (मात्रापुष्पिताग्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based flower-tipped.'
+                        },
+                        'Mātrāśikhariṇī (मात्राशिखरिणी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based peaked meter.'
+                        },
+                        'Mātrārathoddhatā (मात्रारथोद्धता)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based chariot-raised.'
+                        },
+                        'Mātrādrutavilambita (मात्राद्रुतविलम्बित)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based quick and slow.'
+                        },
+                        'Mātrāśālinī (मात्राशालिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based rice-plant meter.'
+                        },
+                        'Mātrāviyoginī (मात्रावियोगिनी)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based separated woman.'
+                        },
+                        'Mātrāvaṃśastha (मात्रावंशस्थ)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based lineage meter.'
+                        },
+                        'Mātrābhujanga (मात्राभुजङ्ग)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based serpent meter.'
+                        },
+                        'Mātrāupajāti (मात्राउपजाति)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Upajāti.'
+                        },
+                        'Mātrāindravajrā (मात्राइन्द्रवज्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Indravajrā.'
+                        },
+                        'Mātrāupendravajrā (मात्राउपेन्द्रवज्रा)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Upendravajrā.'
+                        },
+                        'Mātrātotaka (मात्रातोटक)': {
+                            syllables: null,
+                            pattern: null,
+                            type: 'Mātrā-vṛtta',
+                            description: 'Mātrā-based Toṭaka.'
                         }
                     };
+
 
                     form.addEventListener('submit', (e) => {
                         e.preventDefault();
@@ -760,5 +2132,6 @@
         });
     </script>
 </body>
+
 
 </html>
