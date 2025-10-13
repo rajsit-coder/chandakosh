@@ -26,6 +26,14 @@
             <h1 class="hero-title">Chandkosh</h1>
             <p class="hero-tagline">छन्दकोश - The Treasury of Sanskrit Meters</p>
             <p class="hero-subtitle">Unveiling the Mathematical Beauty of Sanskrit Prosody Through Advanced Pattern Recognition</p>
+            <!-- Add this after the hero-subtitle paragraph -->
+<div style="margin-top: 2rem;">
+    <button class="hero-cta-btn" onclick="scrollToAnalyzer()">
+        <span style="margin-right: 0.5rem;">✍️</span>
+        Start Analyzing
+        <span style="margin-left: 0.5rem;">↓</span>
+    </button>
+</div>
         </div>
     </header>
 
@@ -376,7 +384,32 @@
                             }
                         });
                     });
+// Scroll to analyzer function
+function scrollToAnalyzer() {
+    const analyzerSection = document.getElementById('chandas-form');
+    if (analyzerSection) {
+        analyzerSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+        });
+        
+        // Focus on the textarea after scrolling
+        setTimeout(() => {
+            const textarea = document.getElementById('shloka-input');
+            if (textarea) {
+                textarea.focus();
+                // Add a glow effect
+                textarea.style.boxShadow = '0 0 0 4px rgba(102, 126, 234, 0.4)';
+                setTimeout(() => {
+                    textarea.style.boxShadow = '';
+                }, 1500);
+            }
+        }, 800);
+    }
+}
 
+// Make it globally accessible
+window.scrollToAnalyzer = scrollToAnalyzer;
                     // Add this function to handle example clicks
                     function fillExample(text) {
                         const shlokaInput = document.getElementById('shloka-input');
